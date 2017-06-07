@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="Shortcut Icon" href="/images/content/Icon.ico" />
+    <link rel="stylesheet" href="/stylesheets/theme.css" />
+    <link rel="stylesheet" href="/stylesheets/menustyles.css" />
+    <link rel="stylesheet" href="/stylesheets/menu_sidebar.css"/>
+    <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="SVGRipples/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="SVGRipples/css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="SVGRipples/css/component.css" />
+  
+    <script type="text/javascript" src="/javascripts/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/bootstrap.min.js"></script>
+    <style type="text/css">
+    body{
+ background: #1a1a1a;
+}
+        .vertical-center {
+          min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+          min-height: 90vh; /* These two lines are counted as one :-)       */
+          background-color:#1a1a1a;
+          display: flex;
+          align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+          
+       <div class="jumbotron vertical-center">
+           <div class="container"  >
+
+               
+                    <% include menu_sidebar.ejs %>
+
+                    <div style="text-align:center;width:400px;padding:1em 0;margin-top: 100px;margin-left: 70px;"> <h2><a style="text-decoration:none;"><span style="color:gray;">Current local time in</span><br />Bangkok, Thailand</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&timezone=Asia%2FBangkok" width="100%" height="150" frameborder="0" seamless></iframe> <small style="color:gray;"></small> </div>
+                   <!-- <div class="panel panel-default">
+                       <div class="panel-heading" align="right" style="background-color:#FFF;"><img src='../images/Logo.jpg' height='80px'>
+                       </div>
+                       <div class="panel-body">
+                           <div class="form-inline">
+                              
+                           </div>
+                       </div>
+                    </div> -->
+               
+           </div>
+       </div>
+  </body>
+</html>

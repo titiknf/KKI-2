@@ -1,0 +1,47 @@
+<% 
+if (!Array.prototype.find) {
+  Array.prototype.find = function(predicate) {
+    if (this === null) {
+      throw new TypeError('Array.prototype.find called on null or undefined');
+    }
+    if (typeof predicate !== 'function') {
+      throw new TypeError('predicate must be a function');
+    }
+    var list = Object(this);
+    var length = list.length >>> 0;
+    var thisArg = arguments[1];
+    var value;
+
+    for (var i = 0; i < length; i++) {
+      value = list[i];
+      if (predicate.call(thisArg, value, i, list)) {
+        return value;
+      }
+    }
+    return undefined;
+  };
+}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Setting</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="Shortcut Icon" href="/images/content/Icon.ico" />
+    <link rel="Stylesheet" href="/stylesheets/theme.css" />
+    <link rel="Stylesheet" href="/stylesheets/menustyles.css" />
+    <link rel="Stylesheet" href="/stylesheets/menu_setting.css" />
+    <link rel="Stylesheet" href="/stylesheets/menu_gulp.css" />
+    <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+    <script type="text/javascript" src="/javascripts/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/lib/bootstrap.min.js"></script>
+    </head>
+<body>
+  
+    
+</body>
+</html>
